@@ -1,5 +1,6 @@
 ## Clinica
 ## Spring Boot 3
+## Instructor: Diego Rojas
 ## Alura Latam
 
 | Clase | Pasos                                                              | Errores/Observación     |
@@ -19,5 +20,10 @@
 |       | se agrega la anotacion en el controlador @RequestMapping("/hello") | ![img_2.png](img_2.png) |
 |       | se crea el metodo helloWorld(), con su @GetMapping                 |                         |
 |       |                                                                    |                         |
+| 02-02 | Enviando datos                                                     | ![img_3.png](img_3.png) |
+|       | se debe descargar insomia, para pruebas de api                     |                         |
+|       | https://insomnia.rest/download                                     |                         |
+|       | se crea el nuevo http request                                      | ![img_4.png](img_4.png) |
+|       | se verifica conexion con spring, y el endpoint                     | ![img_5.png](img_5.png) |
 |       |                                                                    |                         |
 
