@@ -31,8 +31,28 @@
 |       | se crea MedicoController                                                       |                         |
 |       | se le coloca @RestController                                                   |                         |
 |       | se agrega el requestmapping  @RequestMapping("/medicos")                       |                         |
-|       | se crea el metodo registrarMedico, como recibe datos entonces se agrega su:    | ![img_6.png](img_6.png)                        |
+|       | se crea el metodo registrarMedico, como recibe datos entonces se agrega su:    | ![img_6.png](img_6.png) |
 |       | @PostMapping                                                                   |                         |
-|       | los datos que se envian son el @RequestBody                                    |  ![img_7.png](img_7.png)                       |
+|       | los datos que se envian son el @RequestBody                                    | ![img_7.png](img_7.png) |
+|       |                                                                                |                         |
+| 02-05 | CORS                                                                           |                         |
+|       | se crea el paquete de configuration                                            |                         |
+|       | se agrega la clase corsconfiguration                                           |                         |
+|       | se agrega el codigo, CORS                                                      |                         |
+|       |                                                                                |                         |
+|       |                                                                                |                         |
+|       |                                                                                |                         |
 |       |                                                                                |                         |
 
+
+### CORS
+    @Configuration
+    public class CorsConfiguration implements WebMvcConfigurer {
+    
+        @Override
+        public void addCorsMappings(CorsRegistry registry) {
+            registry.addMapping("/**")
+                .allowedOrigins("http://localhost:3000")
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD", "TRACE", "CONNECT");
+        }
+    }
