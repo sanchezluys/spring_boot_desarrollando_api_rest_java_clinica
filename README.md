@@ -46,6 +46,11 @@
 |       | se crea la clase enum especialidad, con 4 especialidades                            | ![img_8.png](img_8.png)                     |
 |       | se crea la clase record datosDireccion,                                             | muestra ok, solo envio datos, sin direccion |
 |       |                                                                                     |                                             |
+| 02-07 | DTO Java Record #2                                                                  | ![img_9.png](img_9.png)                     |
+|       | se revisa el formato del dto y del json que se envia, todo ok                       |                                             |
+|       | revision de las validaciones                                                        | ![img_10.png](img_10.png)                   |
+|       | https://docs.oracle.com/en/java/javase/16/language/records.html                     |                                             |
+|       |                                                                                     |                                             |
 
 
 ### CORS
@@ -59,3 +64,21 @@
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD", "TRACE", "CONNECT");
         }
     }
+
+### Json enviado en pruebas con insomia:
+    `
+    {
+        "nombre":"luis",
+        "email":"sanchez@gmail.com",
+        "documento":"1114277",
+        "especialidad":"ODONTOLOGIA",
+        "direccion":
+            {
+            "calle":"pppal",
+            "distrito":"distrito 1",
+            "ciudad":"bucaramanga",
+            "numero":"20",
+            "complemento":"cerca de aqui"
+            }
+    }
+    `
