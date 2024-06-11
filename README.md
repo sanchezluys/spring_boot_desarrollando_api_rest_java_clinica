@@ -50,7 +50,7 @@
 |       | se revisa el formato del dto y del json que se envia, todo ok                       |                                             |
 |       | revision de las validaciones                                                        | ![img_10.png](img_10.png)                   |
 |       | https://docs.oracle.com/en/java/javase/16/language/records.html                     |                                             |
-|       |                                                                                     |                                             |
+|       | probando git                                                                        |                                             |
 
 
 ### CORS
