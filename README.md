@@ -50,7 +50,21 @@
 |       | se revisa el formato del dto y del json que se envia, todo ok                       |                                             |
 |       | revision de las validaciones                                                        | ![img_10.png](img_10.png)                   |
 |       | https://docs.oracle.com/en/java/javase/16/language/records.html                     |                                             |
-|       | probando git                                                                        |                                             |
+|       |                                                                                     |                                             |
+| 03-03 | Agregando dependencias                                                              |                                             |
+|       | - agregar dependencia con spring initializr  ojo seleccionar **maven**              | ![img_11.png](img_11.png)                   |
+|       | - spring data jpa + mysql driver + flyway migration                                 |                                             |
+|       | - se va a explorer y se busca el codigo de la dependencia y se agrega al proyecto   |                                             |
+|       |                                                                                     |                                             |
+|       | luego es necesario configurar el application.properties                             |                                             |
+|       | con:                                                                                |                                             |
+|       | - spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver                      |                                             |
+|       | - spring.datasource.url=jdbc:mysql://host/bd_name                                   |                                             |
+|       | - spring.datasource.username=user_name                                              |                                             |
+|       | - spring.datasource.password=pass_word                                              |                                             |
+|       |                                                                                     |                                             |
+|       | voy a usar la bd de mysql de: https://www.freesqldatabase.com/                      |                                             |
+|       |                                                                                     |                                             |
 
 
 ### CORS
@@ -66,7 +80,7 @@
     }
 
 ### Json enviado en pruebas con insomia:
-    `
+    
     {
         "nombre":"luis",
         "email":"sanchez@gmail.com",
@@ -81,4 +95,25 @@
             "complemento":"cerca de aqui"
             }
     }
-    `
+    
+
+### Dependencias agregadas: mysql + jpa + flyway migration
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.flywaydb</groupId>
+      <artifactId>flyway-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.flywaydb</groupId>
+      <artifactId>flyway-mysql</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.mysql</groupId>
+      <artifactId>mysql-connector-j</artifactId>
+      <scope>runtime</scope>
+    </dependency>
