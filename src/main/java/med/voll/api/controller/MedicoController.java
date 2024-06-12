@@ -2,6 +2,7 @@ package med.voll.api.controller;
 
 import jakarta.validation.Valid;
 import med.voll.api.model.medicos.DatosRegistroMedico;
+import med.voll.api.model.medicos.ListadoMedicos;
 import med.voll.api.model.medicos.Medico;
 import med.voll.api.model.medicos.MedicoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +27,9 @@ public class MedicoController {
     }
 
     @GetMapping
-    public List<Medico> listadoMedicos(){
-        return medicoRepository.findAll();
+    public List<ListadoMedicos> listadoMedicos(){
+        return medicoRepository.findAll().stream()
+                .map(ListadoMedicos::new)
+                .toList();
     }
 }
