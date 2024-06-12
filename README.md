@@ -152,6 +152,15 @@
 |          | - import org.springframework.data.domain.Page;                                               |                                                                                                |
 |          | - import org.springframework.data.domain.Pageable;                                           |                                                                                                |
 |          |                                                                                              |                                                                                                |
+| 04-07    | Paginación #2                                                                                |                                                                                                |
+|          | usa **query param**                                                                          |                                                                                                |
+|          | ya con page, todo queda listo, al agregar al link los query param se pueden filtrarlos datos |                                                                                                |
+|          | de una manera mas facil, por ejemplo agregar:    size, page etc.                             |                                                                                                |
+|          | http://localhost:8080/medicos?size=1  solo muestra 1 dato                                    |                                                                                                |
+|          | http://localhost:8080/medicos?size=1&page=1 solo 1 dato de la pagina 1                       |                                                                                                |
+|          | http://localhost:8080/medicos?size=1&page=3 solo 1 dato de la pagina 3                       |                                                                                                |
+|          |                                                                                              |                                                                                                |
+|          |                                                                                              |                                                                                                |
 
 
 ### CORS
