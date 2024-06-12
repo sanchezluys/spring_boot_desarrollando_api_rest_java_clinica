@@ -144,8 +144,13 @@
 |          |                                                                                              |                                                                                                |
 | 04-03/04 | Probando lista #1 / lista #2                                                                 |                                                                                                |
 |          | se crea un nuevo DTO (clase record con la lista de medicos)                                  |                                                                                                |
-|          | se crea el constructor y se usa el stream()                                                  |  ![img_8.png](img_8.png)                                                                                              |
+|          | se crea el constructor y se usa el stream()                                                  | ![img_8.png](img_8.png)                                                                        |
 |          |                                                                                              |                                                                                                |
+| 04-06    | Paginación #1                                                                                |                                                                                                |
+|          | se usa la clase Page de spring boot                                                          |                                                                                                |
+|          | el payload cambia ahora dentro de un content, dio muchos errores, solucione agregando:       |                                                                                                |
+|          | - import org.springframework.data.domain.Page;                                               |                                                                                                |
+|          | - import org.springframework.data.domain.Pageable;                                           |                                                                                                |
 |          |                                                                                              |                                                                                                |
 
 

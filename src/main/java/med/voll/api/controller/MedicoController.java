@@ -5,10 +5,15 @@ import med.voll.api.model.medicos.DatosRegistroMedico;
 import med.voll.api.model.medicos.ListadoMedicos;
 import med.voll.api.model.medicos.Medico;
 import med.voll.api.model.medicos.MedicoRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+
+import org.springframework.data.domain.Pageable;
+
+
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 
 @RestController
 @RequestMapping("/medicos")
@@ -27,9 +32,7 @@ public class MedicoController {
     }
 
     @GetMapping
-    public List<ListadoMedicos> listadoMedicos(){
-        return medicoRepository.findAll().stream()
-                .map(ListadoMedicos::new)
-                .toList();
+    public Page<ListadoMedicos> listadoMedicos(Pageable paginacion){
+        return medicoRepository.findAll(paginacion).map(ListadoMedicos::new);
     }
 }
