@@ -113,7 +113,21 @@
 |       | se prueba con insomia, todo ok el dato ingresa                                         | ![img_2.png](img_2.png)                                                                        |
 |       | da error el tamaño del documento se lleva a 10                                         |                                                                                                |
 |       |                                                                                        |                                                                                                |
-|       |                                                                                        |                                                                                                |
+| 03-10 | Validación                                                                             |                                                                                                |
+|       | se agrega dependencia del paquete **validation** en https://start.spring.io/           | ![img_3.png](img_3.png)                                                                        |
+|       | en el archivo pom.xml                                                                  |                                                                                                |
+|       | se debe validar en el DTO                                                              |                                                                                                |
+|       | se agregan las anotaciones para cada caso                                              |                                                                                                |
+|       | @NotNull   : no permite nulos                                                          |                                                                                                |
+|       | @NotBalnk  : no permite vacio ni tampoco nulos                                         |                                                                                                |
+|       | @Email     : valida que sea un email                                                   |                                                                                                |
+|       | @Pattern   : experesion regular, por ejemplo solo numeros                              |                                                                                                |
+|       | - en DatosRegistroMedico y en DatosDireccion                                           |                                                                                                |
+|       | debo declarar las validaciones en el controlador  @Valid                               |                                                                                                |
+|       | ahora si se presenta un error estar pendiente del mensaje bad request                  |  ![img_4.png](img_4.png)                                                                                              |
+|       | **reto** falto definir el telefono, y es necesario agregarlo. que hacer?               |                                                                                                                       |
+|       |                                                                                        |                                                                                                                       |
+|       |                                                                                        |                                                                                                                       |
 
 
 ### CORS
@@ -185,3 +199,11 @@ CREATE TABLE medicos (
     numero VARCHAR(20),
     ciudad VARCHAR(100) NOT NULL
 );
+````
+
+### Dependencia del paquete **validation**
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-validation</artifactId>
+    </dependency>
