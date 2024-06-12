@@ -106,6 +106,14 @@
 |       | en ese archivo debe estar el codigo sql para crear la tabla                            | da este error:                                                                                 |
 |       | no puede hacer la migracion, hay un error                                              | 1 SQL migrations were detected but not run because they did not follow the filename convention |
 |       |                                                                                        |                                                                                                |
+| 03-09 | Migraciones flyway #2                                                                  |                                                                                                |
+|       | - el error es por el nombre, debe ser en mayusculas la V                               |                                                                                                |
+|       | V1__create-table-medicos.sql                                                           |                                                                                                |
+|       | me dan muchos errores, se revisa sin exto, se crea la tabla en phpmyadmin con el sql   |                                                                                                |
+|       | se prueba con insomia, todo ok el dato ingresa                                         | ![img_2.png](img_2.png)                                                                        |
+|       | da error el tamaño del documento se lleva a 10                                         |                                                                                                |
+|       |                                                                                        |                                                                                                |
+|       |                                                                                        |                                                                                                |
 
 
 ### CORS
@@ -164,16 +172,16 @@
 ### Codigo SQL para crear la tabla medicos.
 
 ```sql
+DROP TABLE IF EXISTS medicos;
 CREATE TABLE medicos (
-    id BIGINT NOT NULL AUTO_INCREMENT,
+    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
-    documento VARCHAR(6) NOT NULL UNIQUE,
+    documento VARCHAR(10) NOT NULL UNIQUE,
     especialidad VARCHAR(100) NOT NULL,
     calle VARCHAR(100) NOT NULL,
     distrito VARCHAR(100) NOT NULL,
     complemento VARCHAR(100),
     numero VARCHAR(20),
-    ciudad VARCHAR(100) NOT NULL,
-    PRIMARY KEY(id)
+    ciudad VARCHAR(100) NOT NULL
 );
