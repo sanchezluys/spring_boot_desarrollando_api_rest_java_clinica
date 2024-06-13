@@ -164,9 +164,17 @@
 |          | se usa query parameters                                                                      |                                                                                                |
 |          | ojo: el atributo de orden debe tener el mismo nombre en la entidad para que funcione         |                                                                                                |
 |          | 1. se agrega al link &sort=nombre_campo                                                      |                                                                                                |
-|          | ejemplo: http://localhost:8080/medicos?size=3&sort=documento                                                                                    |                                                                                                |
+|          | ejemplo: http://localhost:8080/medicos?size=3&sort=documento                                 |                                                                                                |
 |          | -- si se quieren cambiar los parametros por defecto se hace una anotacion                    |                                                                                                |
 |          | en el controlador por ejemplo @PageableDefault(size = 1)                                     |                                                                                                |
+|          |                                                                                              |                                                                                                |
+| 04-09    | Ordenación #2                                                                                |                                                                                                |
+|          | habilitando el log sql hibernate en la consola de spring                                     |                                                                                                |
+|          | **spring.jpa.show-sql=true**  en application.properties                                      |                                                                                                |
+|          | y para que muestre el query con un mejor formato usamos:                                     |                                                                                                |
+|          | **spring.jpa.properties.hibernate.format_sql=true**                                          |                                                                                                |
+|          | estas dos configuraciones son recomendadas en depuracion, no en produccion                   |                                                                                                |
+|          |                                                                                              |                                                                                                |
 |          |                                                                                              |                                                                                                |
 
 
