@@ -10,6 +10,7 @@ import org.springframework.data.domain.Pageable;
 
 
 import org.springframework.data.web.PageableDefault;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -35,9 +36,9 @@ public class MedicoController {
     }
 
     @PutMapping
-    public void actualizarMedico(DatosActualizarMedico datosActualizarMedico) {
+    @Transactional
+    public void actualizarMedico(@RequestBody @Valid DatosActualizarMedico datosActualizarMedico) {
        Medico medico = medicoRepository.getReferenceById(datosActualizarMedico.id());
        medico.actualizar(datosActualizarMedico);
-
     }
 }

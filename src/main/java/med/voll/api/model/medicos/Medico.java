@@ -2,11 +2,13 @@ package med.voll.api.model.medicos;
 
 
 import jakarta.persistence.*;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import med.voll.api.model.medicos.direccion.Direccion;
+import org.springframework.web.bind.annotation.RequestBody;
 
 
 @Table(name = "medicos")

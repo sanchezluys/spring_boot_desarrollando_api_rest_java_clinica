@@ -190,6 +190,9 @@
 |          | se debe tomar en cuenta si se envian datos nulos en el payload                                                | no esta detectando el id                                                                       |
 |          | se hace validacion con if()                                                                                   | ![img_10.png](img_10.png)                                                                      |
 |          |                                                                                                               |                                                                                                |
+| 05-04    | Actualizando datos #2                                                                                         |                                                                                                |
+|          | faltaba el @RequestBody y @Valid en el metodo actualizarMedico()                                              |                                                                                                |
+|          | se debe agregar la anotacion @Transactional  para que se ejecut la actualizacion en la BD                     |                                                                                                |
 
 
 ### CORS
@@ -276,7 +279,7 @@ CREATE TABLE medicos (
     ALTER TABLE medicos ADD telefono VARCHAR(20) NOT NULL;
 ````
 
-### Nuevo Json ahora con el telefono
+### Nuevo Json ahora con el telefono, para agregar dato payload metodo POST
 
     {
         "nombre":"luis lolo",
@@ -292,6 +295,13 @@ CREATE TABLE medicos (
             "numero":"20",
             "complemento":"cerca de aqui"
         }
+    }
+
+### Payload para actualizar un medico. en insomia, metodo PUT, actualizar solo el nombre
+
+    {
+			"id": 1,
+			"nombre": "nombre 11"
     }
 
 
