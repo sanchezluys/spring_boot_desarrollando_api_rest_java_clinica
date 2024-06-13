@@ -160,6 +160,13 @@
 |          | http://localhost:8080/medicos?size=1&page=1 solo 1 dato de la pagina 1                       |                                                                                                |
 |          | http://localhost:8080/medicos?size=1&page=3 solo 1 dato de la pagina 3                       |                                                                                                |
 |          |                                                                                              |                                                                                                |
+| 04-08    | Ordenación #1                                                                                |                                                                                                |
+|          | se usa query parameters                                                                      |                                                                                                |
+|          | ojo: el atributo de orden debe tener el mismo nombre en la entidad para que funcione         |                                                                                                |
+|          | 1. se agrega al link &sort=nombre_campo                                                      |                                                                                                |
+|          | ejemplo: http://localhost:8080/medicos?size=3&sort=documento                                                                                    |                                                                                                |
+|          | -- si se quieren cambiar los parametros por defecto se hace una anotacion                    |                                                                                                |
+|          | en el controlador por ejemplo @PageableDefault(size = 1)                                     |                                                                                                |
 |          |                                                                                              |                                                                                                |
 
 

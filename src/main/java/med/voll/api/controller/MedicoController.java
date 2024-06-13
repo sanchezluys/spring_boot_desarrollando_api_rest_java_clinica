@@ -12,6 +12,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 
+import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -32,7 +33,7 @@ public class MedicoController {
     }
 
     @GetMapping
-    public Page<ListadoMedicos> listadoMedicos(Pageable paginacion){
+    public Page<ListadoMedicos> listadoMedicos(@PageableDefault(size = 1) Pageable paginacion){
         return medicoRepository.findAll(paginacion).map(ListadoMedicos::new);
     }
 }
