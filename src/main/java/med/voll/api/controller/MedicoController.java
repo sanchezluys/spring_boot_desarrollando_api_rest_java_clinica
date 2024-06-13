@@ -36,4 +36,14 @@ public class MedicoController {
     public Page<ListadoMedicos> listadoMedicos(@PageableDefault(size = 1) Pageable paginacion){
         return medicoRepository.findAll(paginacion).map(ListadoMedicos::new);
     }
+
+    @PutMapping
+    public void actualizarMedico(@RequestBody @Valid DatosRegistroMedico datosRegistroMedico) {
+        System.out.println("El request llega correctamente: ");
+        System.out.println("mostrar parametros: "+ datosRegistroMedico);
+        //
+        medicoRepository.save(new Medico(datosRegistroMedico));
+        //
+        System.out.println("Se guardo correctamente");
+    }
 }
