@@ -193,6 +193,20 @@
 | 05-04    | Actualizando datos #2                                                                                         |                                                                                                |
 |          | faltaba el @RequestBody y @Valid en el metodo actualizarMedico()                                              |                                                                                                |
 |          | se debe agregar la anotacion @Transactional  para que se ejecut la actualizacion en la BD                     |                                                                                                |
+|          |                                                                                                               |                                                                                                |
+| 05-07    | Request DELETE                                                                                                | condiciones definidas                                                                          |
+|          | se crea el payload en insomia, el dato debe ser borrado logicamente, no fisicamente                           | ![img_11.png](img_11.png)                                                                      |
+|          | 1. se hace el borrado normal, existen 2 opciones, enviar el id en el body con un json y el id                 | insomia con sus casos creados:                                                                 |
+|          | que se quiere borrar o usar la url con el /{id}                                                               |                                                                                                |
+|          | ejemplo: http://localhost:8080/medicos/3  borraria al medico con id=3                                         |                                                                                                |
+|          | ---                                                                                                           |                                                                                                |
+|          | Es necesario creal la ruta en el controlador                                                                  |                                                                                                |
+|          | @DeleteMapping("/{id}") para que la ruta sea dinamica                                                         |                                                                                                |
+|          | @Transactional para el commit en la bd                                                                        |                                                                                                |
+|          | @PathVariable para tomar el id del link del endpoint                                                          |                                                                                                |
+|          | verificado, ok                                                                                                |                                                                                                |
+|          |                                                                                                               |                                                                                                |
+|          |                                                                                                               |                                                                                                |
 
 
 ### CORS
@@ -304,4 +318,6 @@ CREATE TABLE medicos (
 			"nombre": "nombre 11"
     }
 
+### Insomia con sus casos creados:
 
+![img_12.png](img_12.png)
