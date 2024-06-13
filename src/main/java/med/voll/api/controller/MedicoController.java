@@ -45,7 +45,15 @@ public class MedicoController {
     @DeleteMapping("/{id}")
     @Transactional
     public void eliminarMedico(@PathVariable Long id) {
+        // version soft deleted
         Medico medico = medicoRepository.getReferenceById(id);
-        medicoRepository.delete(medico);
+        medico.desactivarMedico(medico);
     }
+
+
+//    public void eliminarMedico(@PathVariable Long id) {
+//        Medico medico = medicoRepository.getReferenceById(id);
+//        medicoRepository.delete(medico);
+    // version hard deleted
+//    }
 }

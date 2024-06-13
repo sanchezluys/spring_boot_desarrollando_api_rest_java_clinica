@@ -27,6 +27,8 @@ public class Medico {
     private String email;
     private String telefono;
     private String documento;
+    // soft deleted con un campo
+    private boolean activo = false;
     //
     @Enumerated(EnumType.STRING)
     private Especialidad especialidad;
@@ -35,6 +37,7 @@ public class Medico {
     private Direccion direccion;
 
     public Medico(DatosRegistroMedico datosRegistroMedico) {
+        this.activo=true;
         // mapeo
 
         this.nombre = datosRegistroMedico.nombre();
@@ -56,5 +59,9 @@ public class Medico {
             this.direccion= direccion.actualizar(datosActualizarMedico.direccion());
         }
 
+    }
+
+    public void desactivarMedico(Medico medico) {
+        medico.activo=false;
     }
 }
