@@ -1,10 +1,7 @@
 package med.voll.api.controller;
 
 import jakarta.validation.Valid;
-import med.voll.api.model.medicos.DatosRegistroMedico;
-import med.voll.api.model.medicos.ListadoMedicos;
-import med.voll.api.model.medicos.Medico;
-import med.voll.api.model.medicos.MedicoRepository;
+import med.voll.api.model.medicos.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -38,12 +35,9 @@ public class MedicoController {
     }
 
     @PutMapping
-    public void actualizarMedico(@RequestBody @Valid DatosRegistroMedico datosRegistroMedico) {
-        System.out.println("El request llega correctamente: ");
-        System.out.println("mostrar parametros: "+ datosRegistroMedico);
-        //
-        medicoRepository.save(new Medico(datosRegistroMedico));
-        //
-        System.out.println("Se guardo correctamente");
+    public void actualizarMedico(DatosActualizarMedico datosActualizarMedico) {
+       Medico medico = medicoRepository.getReferenceById(datosActualizarMedico.id());
+       medico.actualizar(datosActualizarMedico);
+
     }
 }

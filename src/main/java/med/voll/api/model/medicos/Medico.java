@@ -34,11 +34,25 @@ public class Medico {
 
     public Medico(DatosRegistroMedico datosRegistroMedico) {
         // mapeo
+
         this.nombre = datosRegistroMedico.nombre();
         this.email = datosRegistroMedico.email();
         this.telefono = datosRegistroMedico.telefono();
         this.documento = datosRegistroMedico.documento();
         this.especialidad = datosRegistroMedico.especialidad();
         this.direccion = new Direccion(datosRegistroMedico.direccion());
+    }
+
+    public void actualizar(DatosActualizarMedico datosActualizarMedico) {
+        if(datosActualizarMedico.nombre() != null) {
+            this.nombre = datosActualizarMedico.nombre();
+        }
+        if(datosActualizarMedico.documento() != null){
+            this.documento= datosActualizarMedico.documento();
+        }
+        if(datosActualizarMedico.direccion() != null){
+            this.direccion= direccion.actualizar(datosActualizarMedico.direccion());
+        }
+
     }
 }

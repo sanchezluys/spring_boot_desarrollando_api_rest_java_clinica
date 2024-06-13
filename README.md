@@ -182,6 +182,13 @@
 |          | por un WARN 10528: de formato de json se agrega la siguiente anotacion enla clase principal                   |                                                                                                |
 |          | @EnableSpringDataWebSupport(pageSerializationMode = EnableSpringDataWebSupport.PageSerializationMode.VIA_DTO) |                                                                                                |
 |          |                                                                                                               |                                                                                                |
+| 05-03    | Actualizando datos #1                                                                                         |                                                                                                |
+|          | se crea un nuevo DTO DatosActualizarMedico                                                                    |                                                                                                |
+|          | se definen las validaciones, por ejemplo el id debe ser @NotNull                                              |                                                                                                |
+|          | ** se agrega configuracion: spring.jpa.open-in-view=false                                                     |                                                                                                |
+|          | ** para atender WARN 10528                                                                                    |                                                                                                |
+|          | se debe tomar en cuenta si se envian datos nulos en el payload                                                | no esta detectando el id                                                                       |
+|          | se hace validacion con if()                                                                                   | ![img_10.png](img_10.png)                                                                      |
 |          |                                                                                                               |                                                                                                |
 
 
