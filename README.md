@@ -1,5 +1,5 @@
 ## Clinica
-## Spring Boot 3
+## Spring Boot 3 => spring-boot-3-desarrollar-api-rest-java
 ## Instructor: Diego Rojas
 ## Alura Latam
 
@@ -217,6 +217,13 @@
 |          | -- coloque mal el nombre con 1 solo piso, y es con 2 V__ y no V_                                              |                                                                                                               |
 |          | 5. se crea el metodo desactivar medico                                                                        |                                                                                                               |
 |          | -- se verifica y no se coloca en 0 el medico desactivado                                                      |                                                                                                               |
+|          |                                                                                                               |                                                                                                               |
+| 05-09    | Exclusión logica #2                                                                                           |                                                                                                               |
+|          | el metodo desactivarMedico() no lleva parametro ya que es la misma entidad, se cambia por:                    |                                                                                                               |
+|          | this.activo=false. se prueba ok                                                                               |                                                                                                               |
+|          | - pero el listdo sigue saliendo con todos los medicos                                                         |                                                                                                               |
+|          | - se usa spring data query dinamico con findByActivoTrue                                                      |                                                                                                               |
+|          | Page<Medico> findByActivoTrue(Pageable paginacion);                                                           |                                                                                                               |
 |          |                                                                                                               |                                                                                                               |
 |          |                                                                                                               |                                                                                                               |
 
