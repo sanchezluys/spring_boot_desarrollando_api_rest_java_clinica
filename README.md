@@ -3,9 +3,20 @@
 ## Instructor: Diego Rojas
 ## Alura Latam
 
-| Clase | Pasos                                    | Errores/Observación |
-|-------|------------------------------------------|---------------------|
-|       | Iniciando rama para esta parte del curso |                     |
+| Clase | Pasos                                                | Errores/Observación |
+|-------|------------------------------------------------------|---------------------|
+|       | Iniciando rama para esta parte del curso             |                     |
+|       |                                                      |                     |
+| 01-03 | Estandarizando retornos de API                       |                     |
+|       | Es necesario enviar respuestas mas claras al cliente |                     |
+|       | con codigos personalizados ejem: 201 y no solo 200   |                     |
+|       |                                                      |                     |
+|       |                                                      |                     |
+
+
+### Objetivos:
+
+![img.png](img.png)
 
 
 ### CORS
