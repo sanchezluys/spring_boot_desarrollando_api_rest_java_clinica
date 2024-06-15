@@ -14,6 +14,9 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.util.UriComponentsBuilder;
+
+import java.net.URI;
 
 
 @RestController
@@ -23,13 +26,33 @@ public class MedicoController {
     private MedicoRepository medicoRepository;
 
     @PostMapping
-    public void registrarMedico(@RequestBody @Valid DatosRegistroMedico datosRegistroMedico) {
-        System.out.println("El request llega correctamente: ");
-        System.out.println("mostrar parametros: "+ datosRegistroMedico);
+    public ResponseEntity<DatosRespuestaMedico> registrarMedico(@RequestBody
+                                              @Valid
+                                              DatosRegistroMedico datosRegistroMedico,
+                                                UriComponentsBuilder uriComponentsBuilder
+                                            ) {
         //
-        medicoRepository.save(new Medico(datosRegistroMedico));
+        Medico medico = medicoRepository.save(new Medico(datosRegistroMedico));
         //
-        System.out.println("Se guardo correctamente");
+        DatosRespuestaMedico datosRespuesta = new
+                DatosRespuestaMedico(
+                    medico.getId(),
+                    medico.getNombre(),
+                    medico.getDocumento(),
+                    medico.getEmail(),
+                    medico.getEspecialidad().toString(),
+                    new DatosDireccion(
+                            medico.getDireccion().getCalle(),
+                            medico.getDireccion().getDistrito(),
+                            medico.getDireccion().getCiudad(),
+                            medico.getDireccion().getNumero(),
+                            medico.getDireccion().getComplemento()
+                    )
+                );
+        URI url = uriComponentsBuilder.path("/medicos/{id}").buildAndExpand(medico.getId()).toUri();
+
+
+        return ResponseEntity.created(url).body(datosRespuesta);
     }
 
     @GetMapping
