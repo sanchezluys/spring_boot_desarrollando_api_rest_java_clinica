@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
-
 public class Medico {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -35,8 +35,11 @@
 |       | como es necesario retornar una URL entonces se usa en la clase un helper de spring para eso:   | nuevo id agregado:               |
 |       | UriComponentsBuilder en los parametros                                                         | ![img_3.png](img_3.png)          |
 |       | URI url = uriComponentsBuilder.path("/medicos/{id}").buildAndExpand(medico.getId()).toUri();   | en el header devuelve la url:    |
-|       |                                                                                                | ![img_4.png](img_4.png)                                 |
-|       |                                                                                                |                                  |
+|       |                                                                                                | ![img_4.png](img_4.png)          |
+| 01-05 | Detallando los datos de API                                                                    |                                  |
+|       | Un error 405 dice que el metodo no esta habilitado o implementado, en nuestro caso existe      |                                  |
+|       | el metodo get para el listado de medicos, pero no para un medico en especifico                 |                                  |
+|       | su usa ahora un wrapper o envoltorio para el getmappin del listado de medicos                  |                                  |
 
 
 ### Objetivos:
