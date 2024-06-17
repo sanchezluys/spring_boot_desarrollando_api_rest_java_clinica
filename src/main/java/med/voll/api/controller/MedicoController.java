@@ -93,7 +93,7 @@ public class MedicoController {
         return ResponseEntity.noContent().build();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/2/{id}")
     public ResponseEntity<DatosRespuestaMedico> verMedico(@PathVariable Long id) {
         Medico medico = medicoRepository.getReferenceById(id);
         var datosMedico= new DatosRespuestaMedico(
@@ -110,6 +110,20 @@ public class MedicoController {
                         medico.getDireccion().getComplemento()
                 )
         );
+        return ResponseEntity.ok(datosMedico);
+    }
+
+    // la del profe:
+
+    @GetMapping("/{id}")
+    @Transactional(readOnly = true)
+    public ResponseEntity<DatosRespuestaMedico> retornaDatosMedico(@PathVariable Long id) {
+        Medico medico = medicoRepository.getReferenceById(id);
+        var datosMedico = new DatosRespuestaMedico(medico.getId(), medico.getNombre(), medico.getEmail(),
+                medico.getTelefono(), medico.getEspecialidad().toString(),
+                new DatosDireccion(medico.getDireccion().getCalle(), medico.getDireccion().getDistrito(),
+                        medico.getDireccion().getCiudad(), medico.getDireccion().getNumero(),
+                        medico.getDireccion().getComplemento()));
         return ResponseEntity.ok(datosMedico);
     }
 
