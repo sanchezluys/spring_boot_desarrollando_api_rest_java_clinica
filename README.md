@@ -50,6 +50,16 @@
 |       | en el aprtado: server properties (a la derecha)                                                |                                                    |
 |       | server.error.include-stacktrace=never                                                          |                                                    |
 |       |                                                                                                |                                                    |
+| 02-03 | Tratando el error 404 #1                                                                       |                                                    |
+|       | la excepcion cuando se busca un medico que no existe es: EntityNotFoundException               |                                                    |
+|       | y deberia devolver el erro 404 que es no encontrado y no error 500 que es de servidor          |                                                    |
+|       | para tratar la excepcion se puede usar try-catch, pero spring ya trae un opcion                |                                                    |
+|       | 1. se crea nuevo paquete - infra                                                               |                                                    |
+|       | 2. se crea nueva clase TratadorDeErrores.java  para tratar los errores de manera global        |                                                    |
+|       |                                                                                                |                                                    |
+| 02-04 | Tratando el error 404 #2                                                                       |                                                    |
+|       |                                                                                                |                                                    |
+|       |                                                                                                |                                                    |
 
 
 ### Objetivos:
