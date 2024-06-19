@@ -58,6 +58,8 @@
 |       | 2. se crea nueva clase TratadorDeErrores.java  para tratar los errores de manera global        |                                                    |
 |       |                                                                                                |                                                    |
 | 02-04 | Tratando el error 404 #2                                                                       |                                                    |
+|       | se crea el metodo en la clase tratadorDeErrores, con la anotacion:  @RestControllerAdvice      | ![img_6.png](img_6.png)                            |
+|       | @ExceptionHandler y la excepcion: EntityNotFoundException.class                                |                                                    |
 |       |                                                                                                |                                                    |
 |       |                                                                                                |                                                    |
 
