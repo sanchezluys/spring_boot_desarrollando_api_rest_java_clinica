@@ -98,6 +98,17 @@
 |       | -- para clave se define un dato encriptado con hashing de 300 caracteres                                                              |                                                                   |
 |       | -- se ejecuta la migracion                                                                                                            | ![img.png](img.png)                                               |
 |       |                                                                                                                                       | ![img_1.png](img_1.png)                                           |
+| 03-06 | Repository Service                                                                                                                    |                                                                   |
+|       | la encriptacion a usar en spring security sera: BCrypt                                                                                |                                                                   |
+|       | siguiendo los pasos de la clase anterior:                                                                                             |                                                                   |
+|       | 5. se debe crear el repositorio  que es una interfaz, que extienda de JpaRepository<Usuario, Long>                                    |                                                                   |
+|       | 6. se crea el servicio de autenticacion de usuarios, para mejorar las carpetas de crean 2 paquetes, errores y security                |                                                                   |
+|       | -- AutenticacionService.java                                                                                                          |                                                                   |
+|       | -- marcar con @Service                                                                                                                |                                                                   |
+|       | -- se debe implementar la interface por spring para validar usuarios: UserDetailsService                                              |                                                                   |
+|       | -- se implementan los metodos con intellij                                                                                            |                                                                   |
+|       | -- se debe crear el metodo en el repositorio                                                                                          |                                                                   |
+|       | 7. se crea el metodo UserDetails findByUsername(String username);                                                                     |                                                                   |
 
 
 ### Objetivos:
