@@ -89,6 +89,15 @@
 |       | por defecto todos los request necesitan autorizacion y estan bloqueados                                                               |                                                                   |
 |       | y se crea de manera automatica un login:                                                                                              | ![img_14.png](img/img_14.png)                                     |
 |       |                                                                                                                                       |                                                                   |
+| 03-05 | Las entidades usuario y migration                                                                                                     |                                                                   |
+|       | se requieren pasos para configurar. se necesita el bd los usuarios y claves                                                           |                                                                   |
+|       | 1. se crea nuevo paquete usuarios                                                                                                     |                                                                   |
+|       | 2. se crea la clase Usuarios                                                                                                          |                                                                   |
+|       | 3. se agregan las anotaciones y se define la tabla y la entidad para configurar todo con JPA                                          |                                                                   |
+|       | 4. luego se hace la migracion en la bd  V4__create-table-usuarios.sql                                                                 |                                                                   |
+|       | -- para clave se define un dato encriptado con hashing de 300 caracteres                                                              |                                                                   |
+|       | -- se ejecuta la migracion                                                                                                            | ![img.png](img.png)                                               |
+|       |                                                                                                                                       | ![img_1.png](img_1.png)                                           |
 
 
 ### Objetivos:
