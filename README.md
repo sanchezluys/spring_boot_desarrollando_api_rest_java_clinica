@@ -120,6 +120,10 @@
 | 03-12 | Controller de autenticación                                                                                                           |                                                                   |
 |       | se crea en insomia en login de usuario, el payload se adjunta                                                                         |                                                                   |
 |       | se crea el autenticationController                                                                                                    |                                                                   |
+|       | se crea el dto, DatosAutenticacionUsuario tipo record                                                                                 |                                                                   |
+|       | se usa de spring boot AuthenticationManager                                                                                           |                                                                   |
+|       |                                                                                                                                       |                                                                   |
+|       |                                                                                                                                       |                                                                   |
 
 
 ### Objetivos:
