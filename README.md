@@ -109,6 +109,13 @@
 |       | -- se implementan los metodos con intellij                                                                                            |                                                                   |
 |       | -- se debe crear el metodo en el repositorio                                                                                          |                                                                   |
 |       | 7. se crea el metodo UserDetails findByUsername(String username);                                                                     |                                                                   |
+|       |                                                                                                                                       |                                                                   |
+| 03-08 | Configuración de seguridad #1                                                                                                         |                                                                   |
+| 03-09 | se crea una nueva clase en el paquete security. SecurityConfigurations, marcada con @Configuration y @EnableWebSecurity               |                                                                   |
+|       | en la compilacion spring primero revisa los anotados con @Configuration para saber que debe configurar primero                        |                                                                   |
+|       | se crea el metodo SecurityFilterChain                                                                                                 |                                                                   |
+|       | habia un error en el repository: era **findByLogin y no findByUsername**                                                              |                                                                   |
+|       | ya se habilitan los endpoints pero otra vez quedan disponibles y vulnerables. no se pide ni usuario ni clave                          |                                                                   |
 
 
 ### Objetivos:
