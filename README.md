@@ -133,9 +133,15 @@
 |       | al Usuario es necesario implementar la interface UserDetails                                                                          |                                                                   |
 |       | aun no logea... da error 403 Forbidden                                                                                                |                                                                   |
 |       |                                                                                                                                       |                                                                   |
-| 03-14 | Retornando usuarios mysql #2                                                                                                          |                                                                   |
-|       | faltaba en autenticationcontroller agregar el @RequestBody y el @Valid en su metodo                                                   |                                                                   |
-|       | autenticarUsuario.                                                                                                                    |                                                                   |
+| 03-14 | Retornando usuarios mysql #2                                                                                                          | ![img_2.png](img_2.png)                                           |
+|       | faltaba en autenticationcontroller agregar el @RequestBody y el @Valid en su metodo                                                   | usuario incorrecto entonces acceso denegado                       |
+|       | autenticarUsuario. ya valida bien                                                                                                     | ![img_3.png](img_3.png)                                           |
+|       |                                                                                                                                       |                                                                   |
+| 04-02 | Agregando la libreria auth0-jwt                                                                                                       |                                                                   |
+|       | se usa JWT, https://jwt.io/  estandar para definicion de tokens                                                                       |                                                                   |
+|       | nos lleva a : https://github.com/auth0                                                                                                |                                                                   |
+|       | https://github.com/auth0/java-jwt                                                                                                     |                                                                   |
+|       | se agrega la dependencia al pom.xml                                                                                                   |                                                                   |
 |       |                                                                                                                                       |                                                                   |
 
 
@@ -164,3 +170,11 @@
         "login":"luys",
         "clave":"******"
     }
+
+### Dependencia para JWT Auth
+
+    <dependency>
+      <groupId>com.auth0</groupId>
+      <artifactId>java-jwt</artifactId>
+      <version>4.4.0</version>
+    </dependency>
