@@ -116,6 +116,10 @@
 |       | se crea el metodo SecurityFilterChain                                                                                                 |                                                                   |
 |       | habia un error en el repository: era **findByLogin y no findByUsername**                                                              |                                                                   |
 |       | ya se habilitan los endpoints pero otra vez quedan disponibles y vulnerables. no se pide ni usuario ni clave                          |                                                                   |
+|       |                                                                                                                                       |                                                                   |
+| 03-12 | Controller de autenticación                                                                                                           |                                                                   |
+|       | se crea en insomia en login de usuario, el payload se adjunta                                                                         |                                                                   |
+|       | se crea el autenticationController                                                                                                    |                                                                   |
 
 
 ### Objetivos:
@@ -137,3 +141,9 @@
       <artifactId>spring-boot-starter-security</artifactId>
     </dependency>
 
+### Payload para login
+
+    {
+        "login":"luys",
+        "clave":"******"
+    }
