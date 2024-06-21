@@ -123,7 +123,15 @@
 |       | se crea el dto, DatosAutenticacionUsuario tipo record                                                                                 |                                                                   |
 |       | se usa de spring boot AuthenticationManager                                                                                           |                                                                   |
 |       |                                                                                                                                       |                                                                   |
-|       |                                                                                                                                       |                                                                   |
+| 03-13 | Retornando usuarios mysql #1                                                                                                          |                                                                   |
+|       | se usa https://www.browserling.com/tools/bcrypt                                                                                       |                                                                   |
+|       | para por ejemplo encriptar la clave ya que debe ser guardadada encriptada                                                             |                                                                   |
+|       | por ejemplo para 123456                                                                                                               |                                                                   |
+|       | es: $2a$10$poRIRQcgbOPAMsLEJCXatedNg6TTvRqJAGOPMebMkfDF3cpcub8ym                                                                      |                                                                   |
+|       | * Spring Boot necesita saber en la clase Usuario quien es el nombre, quien la clave y que                                             |                                                                   |
+|       | * algoritmo será usado para la encriptacion. en securityconfiguration                                                                 |                                                                   |
+|       | al Usuario es necesario implementar la interface UserDetails                                                                          |                                                                   |
+|       | aun no logea... da error 403 Forbidden                                                                                                |                                                                   |
 
 
 ### Objetivos:
