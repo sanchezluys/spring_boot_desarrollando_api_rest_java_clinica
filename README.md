@@ -132,6 +132,11 @@
 |       | * algoritmo será usado para la encriptacion. en securityconfiguration                                                                 |                                                                   |
 |       | al Usuario es necesario implementar la interface UserDetails                                                                          |                                                                   |
 |       | aun no logea... da error 403 Forbidden                                                                                                |                                                                   |
+|       |                                                                                                                                       |                                                                   |
+| 03-14 | Retornando usuarios mysql #2                                                                                                          |                                                                   |
+|       | faltaba en autenticationcontroller agregar el @RequestBody y el @Valid en su metodo                                                   |                                                                   |
+|       | autenticarUsuario.                                                                                                                    |                                                                   |
+|       |                                                                                                                                       |                                                                   |
 
 
 ### Objetivos:
