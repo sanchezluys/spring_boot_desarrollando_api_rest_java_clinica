@@ -149,6 +149,19 @@
 |       | se cambia el algoritmo por: Algorithm.HMAC256() que pide el string para validar tambien llamada **secret**                            | ![img_4.png](img_4.png)                                           |
 |       | se valida el token generado en el sitio web de jwt                                                                                    | ![img_5.png](img_5.png)                                           |
 |       |                                                                                                                                       |                                                                   |
+| 04-04 | Ajustes de generación en jwt                                                                                                          |                                                                   |
+|       | es necesario que los tokens sean dinamicos                                                                                            |                                                                   |
+|       | se agrega parametro en el metodo: generarToken()                                                                                      |                                                                   |
+|       | se le agrega el id                                                                                                                    |                                                                   |
+|       | se le agrega tiempo de expiracion del token                                                                                           | ![img_6.png](img_6.png)                                           |
+|       | ahora al front es necesario enviar es un dto, no un string con el token                                                               |                                                                   |
+|       | se crea el record DatosJWTtoken dt, ahora la respuesta es en formato json                                                             |                                                                   |
+|       | el **secret** puede ser agregado en applications.properties                                                                           |                                                                   |
+|       | api.security.secret=xxxxxx  , pero por seguridad se deben usar variables de entorno                                                   |                                                                   |
+|       | api.security.secret=${JWT_SECRET}                                                                                                     |                                                                   |
+|       | y se llama en la clase: @Value("${api.security.secret}")                                                                              |                                                                   |
+|       | se puede usar un valor por defecto: api.security.secret=${JWT_SECRET:123456}                                                          |                                                                   |
+|       |                                                                                                                                       |                                                                   |
 |       |                                                                                                                                       |                                                                   |
 
 
