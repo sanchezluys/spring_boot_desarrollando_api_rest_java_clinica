@@ -143,6 +143,13 @@
 |       | https://github.com/auth0/java-jwt                                                                                                     |                                                                   |
 |       | se agrega la dependencia al pom.xml                                                                                                   |                                                                   |
 |       |                                                                                                                                       |                                                                   |
+| 04-03 | Generando un jwt                                                                                                                      |                                                                   |
+|       | se crea en security una clase TokenService con su anotacion @Service                                                                  |                                                                   |
+|       | se usa el codigo de ejemplo de github                                                                                                 |                                                                   |
+|       | se cambia el algoritmo por: Algorithm.HMAC256() que pide el string para validar tambien llamada **secret**                            | ![img_4.png](img_4.png)                                           |
+|       | se valida el token generado en el sitio web de jwt                                                                                    | ![img_5.png](img_5.png)                                           |
+|       |                                                                                                                                       |                                                                   |
+|       |                                                                                                                                       |                                                                   |
 
 
 ### Objetivos:
@@ -178,3 +185,14 @@
       <artifactId>java-jwt</artifactId>
       <version>4.4.0</version>
     </dependency>
+
+### Codigo de ejemplo de Auth0
+
+    try {
+        Algorithm algorithm = Algorithm.RSA256(rsaPublicKey, rsaPrivateKey);
+        String token = JWT.create()
+        .withIssuer("auth0")
+        .sign(algorithm);
+    } catch (JWTCreationException exception){
+        // Invalid Signing configuration / Couldn't convert Claims.
+    }
