@@ -198,6 +198,11 @@
 |       | el error esta en securityfilter, en su logica                                                                                         |                                                                   |
 |       | se ajusta pero se nota que la logica no ingresa al filter, no se genera nigun error pero tampoco                                      |                                                                   |
 |       | deja ingresar a los recursos con el token que se genera                                                                               |                                                                   |
+|       |                                                                                                                                       |                                                                   |
+| 05-12 | Probando el Control acceso                                                                                                            |                                                                   |
+|       | el error sigue en securityconfiguration, ya que el filtro no se esta aplicando                                                        |                                                                   |
+|       | se valida en securityfilter                                                                                                           |                                                                   |
+|       |                                                                                                                                       |                                                                   |
 
 
 ### Objetivos:
