@@ -192,12 +192,12 @@
 |       |                                                                                                                                       |                                                                   |
 | 05-10 | Liberando el Acceso login #1                                                                                                          |                                                                   |
 |       | con la configuracion anterior el login queda bloqueado y no deja generar otro token                                                   |                                                                   |
-|       | en securityconfiguration, da error: El token enviado no es valido                                                                                                  |                                                                   |
+|       | en securityconfiguration, da error: El token enviado no es valido                                                                     |                                                                   |
 |       |                                                                                                                                       |                                                                   |
 | 05-11 | Liberando el Acceso login #2                                                                                                          |                                                                   |
-|       |                                                                                                                                       |                                                                   |
-|       |                                                                                                                                       |                                                                   |
-|       |                                                                                                                                       |                                                                   |
+|       | el error esta en securityfilter, en su logica                                                                                         |                                                                   |
+|       | se ajusta pero se nota que la logica no ingresa al filter, no se genera nigun error pero tampoco                                      |                                                                   |
+|       | deja ingresar a los recursos con el token que se genera                                                                               |                                                                   |
 
 
 ### Objetivos:

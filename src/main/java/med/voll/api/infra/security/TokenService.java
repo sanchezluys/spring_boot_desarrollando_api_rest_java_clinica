@@ -42,6 +42,11 @@ public class TokenService {
     }
 
     public String getSubject(String token) {
+        if(token == null){
+            throw new RuntimeException("Error token nulo...");
+        }
+
+
         DecodedJWT verifier = null;
         try {
             Algorithm algorithm = Algorithm.HMAC256(apiSecret);

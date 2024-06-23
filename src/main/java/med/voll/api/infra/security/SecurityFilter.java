@@ -22,15 +22,13 @@ public class SecurityFilter extends OncePerRequestFilter {
 
         var token = request.getHeader("Authorization");
 
-        if(token == null || token == ""){
-            throw new RuntimeException("El token enviado no es valido");
+        if(token != null){
+            System.out.println("token recibo no es nullo...");
+            token = token.replace("Bearer ","");
+            System.out.println("token recibido sin bearer: " + token);
+            System.out.println("validadno la firma: "+tokenService.getSubject(token));
         }
-        token = token.replace("Bearer ","");
-
-        System.out.println("token recibido sin bearer: " + token);
-
-        System.out.println("validadno la firma: "+tokenService.getSubject(token));
-
         filterChain.doFilter(request, response);
+
     }
 }
