@@ -186,6 +186,11 @@
 | 05-06 | Obteniendo el Token #2                                                                                                                |                                                                   |
 |       | se verifica que el token no se ani nulo ni vacio, de ser asi se genera una excepcion                                                  |                                                                   |
 |       |                                                                                                                                       |                                                                   |
+| 05-07 | Obteniendo el Token #2                                                                                                                |                                                                   |
+|       | en la clase tokenservice se crea el metodo para validarlo                                                                             |                                                                   |
+|       | se va a la documentacion y se usa el codigo de ejemplo para validar el token                                                          |                                                                   |
+|       |                                                                                                                                       |                                                                   |
+|       |                                                                                                                                       |                                                                   |
 
 
 ### Objetivos:
@@ -231,4 +236,26 @@
         .sign(algorithm);
     } catch (JWTCreationException exception){
         // Invalid Signing configuration / Couldn't convert Claims.
+    }
+
+
+
+### Código de ejemplo para validar el token
+
+    String token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXUyJ9.eyJpc3MiOiJhdXRoMCJ9.AbIJTDMFc7yUa5MhvcP03nJPyCPzZtQcGEp-zWfOkEE";
+    DecodedJWT decodedJWT;
+    try 
+        {
+            Algorithm algorithm = Algorithm.RSA256(rsaPublicKey, rsaPrivateKey);
+            JWTVerifier verifier = JWT.require(algorithm)
+            // specify any specific claim validations
+            .withIssuer("auth0")
+            // reusable verifier instance
+            .build();
+            
+            decodedJWT = verifier.verify(token);
+        } 
+    catch (JWTVerificationException exception)
+    {
+        // Invalid signature/claims
     }
