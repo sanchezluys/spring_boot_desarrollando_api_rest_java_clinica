@@ -169,6 +169,13 @@
 |       | utilizando la imegen adjunta se opta por utilizar filtros ya que mvc de spring permite                                                |                                                                   |
 |       | validar filtros antes de llegar al controlador                                                                                        |                                                                   |
 |       |                                                                                                                                       |                                                                   |
+| 05-04 | Creando el Security Filter                                                                                                            |                                                                   |
+|       | se crea la clase filtro en infra.security llamada security.filter                                                                     |                                                                   |
+|       | se marca como @Component, spring usa varios estereotipos                                                                              |                                                                   |
+|       | se extiende de:  extends OncePerRequestFilter                                                                                         |                                                                   |
+|       | se verifica y el filtro se esta revisando                                                                                             |                                                                   |
+|       | el filtro necesita una cadena de filtros, de lo contrario no devuelve ningun recurso                                                  |                                                                   |
+|       | -> filterChain.doFilter(request, response);                                                                                           |                                                                   |
 
 
 ### Objetivos:
