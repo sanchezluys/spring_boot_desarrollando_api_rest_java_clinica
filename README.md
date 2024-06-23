@@ -190,6 +190,13 @@
 |       | en la clase tokenservice se crea el metodo para validarlo                                                                             |                                                                   |
 |       | se va a la documentacion y se usa el codigo de ejemplo para validar el token                                                          |                                                                   |
 |       |                                                                                                                                       |                                                                   |
+| 05-10 | Liberando el Acceso login #1                                                                                                          |                                                                   |
+|       | con la configuracion anterior el login queda bloqueado y no deja generar otro token                                                   |                                                                   |
+|       | en securityconfiguration, da error: El token enviado no es valido                                                                                                  |                                                                   |
+|       |                                                                                                                                       |                                                                   |
+| 05-11 | Liberando el Acceso login #2                                                                                                          |                                                                   |
+|       |                                                                                                                                       |                                                                   |
+|       |                                                                                                                                       |                                                                   |
 |       |                                                                                                                                       |                                                                   |
 
 
@@ -258,4 +265,16 @@
     catch (JWTVerificationException exception)
     {
         // Invalid signature/claims
+    }
+
+### Código usado para la validacion del token en el filter chain
+
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        return http.csrf().disable()
+        .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+        .and().authorizeHttpRequests()
+        .requestMatchers(HttpMethod.POST, "/login").permitAll()
+        .anyRequest().authenticated()
+        .and().build();
     }
