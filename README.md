@@ -182,6 +182,10 @@
 |       | el token debe ser enviado en el header del front                                                                                      | ![img_8.png](img_8.png)                                           |
 |       | por defecto el token se envia con un prefijo, por ejemplo Bearer                                                                      |                                                                   |
 |       | entonces es necesario quitar ese prefijo: request.getHeader("Authorization").replace("Bearer ","");                                   |                                                                   |
+|       |                                                                                                                                       |                                                                   |
+| 05-06 | Obteniendo el Token #2                                                                                                                |                                                                   |
+|       | se verifica que el token no se ani nulo ni vacio, de ser asi se genera una excepcion                                                  |                                                                   |
+|       |                                                                                                                                       |                                                                   |
 
 
 ### Objetivos:
