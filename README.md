@@ -176,6 +176,12 @@
 |       | se verifica y el filtro se esta revisando                                                                                             |                                                                   |
 |       | el filtro necesita una cadena de filtros, de lo contrario no devuelve ningun recurso                                                  |                                                                   |
 |       | -> filterChain.doFilter(request, response);                                                                                           |                                                                   |
+|       |                                                                                                                                       |                                                                   |
+| 05-05 | Obteniendo el Token #1                                                                                                                |                                                                   |
+|       | se debe obtener el token, que viene en el header                                                                                      |                                                                   |
+|       | el token debe ser enviado en el header del front                                                                                      | ![img_8.png](img_8.png)                                           |
+|       | por defecto el token se envia con un prefijo, por ejemplo Bearer                                                                      |                                                                   |
+|       | entonces es necesario quitar ese prefijo: request.getHeader("Authorization").replace("Bearer ","");                                   |                                                                   |
 
 
 ### Objetivos:
