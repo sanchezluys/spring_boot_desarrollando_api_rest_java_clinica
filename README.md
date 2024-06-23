@@ -162,6 +162,12 @@
 |       | y se llama en la clase: @Value("${api.security.secret}")                                                                              |                                                                   |
 |       | se puede usar un valor por defecto: api.security.secret=${JWT_SECRET:123456}                                                          |                                                                   |
 |       |                                                                                                                                       |                                                                   |
+| 05-02 | Interceptando el Requests                                                                                                             |                                                                   |
+|       | los recursos estan disponibles, es necesario bloquearlos y habilitarlos solo con el token valido                                      |                                                                   |
+|       | pasamos de la autenticacion a la autorizacion                                                                                         | ![img_7.png](img_7.png)                                           |
+|       | una opcion seria validar el token en cada metodo, pero eso no es escalable                                                            |                                                                   |
+|       | utilizando la imegen adjunta se opta por utilizar filtros ya que mvc de spring permite                                                |                                                                   |
+|       | validar filtros antes de llegar al controlador                                                                                        |                                                                   |
 |       |                                                                                                                                       |                                                                   |
 
 
